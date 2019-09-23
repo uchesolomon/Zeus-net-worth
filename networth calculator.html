@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head><title>Networth Calculator</title>
+	<style type="text/css">
+		body, html {
+	background: #ECEDEF;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.2);
+	border-radius: 14px;
+	padding-bottom: 20px;
+	width: 320px;
+	
+}
+	</style>
+
+
+<script>
+function myFunction(){
+var asst= parseInt(document.getElementById("asst").value); 
+
+var cash= parseInt(document.getElementById("cash").value); 
+
+var liab= parseInt(document.getElementById("liab").value); 
+
+
+var networth= asst-liab;
+
+document.getElementById("demo").innerHTML=networth;
+
+}
+function myOtherFunction(x){ x.style.background="yellow";
+
+}
+
+
+</script>
+</head>
+
+
+<body>
+<h1> Networth Calculator</h1>
+<div id="container">
+<form>
+Current Asset:<input type="text" id="asst" onkeyup="myFunction()" onfocus="myOtherFunction(this)"/>
+<p>
+
+Cash At Bank: <input type="text" id="cash" onkeyup="myFunction()" onfocus="myOtherFunction(this)"/>
+<p>
+
+Current Liabilities: <input type="text" id="liab" onkeyup="myFunction()" onfocus="myOtherFunction(this)"/>
+<p>
+
+</form>
+
+
+
+<p>Your Networth is : <span id="demo"></span></p>
+
+</div>
+
+
+ 
+</body>
+</html>
