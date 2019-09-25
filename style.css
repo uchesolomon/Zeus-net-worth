@@ -1,9 +1,10 @@
 body {
+	background-image: url(RectangleNETWORTH BACKGROUND.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-blend-mode: luminosity;
-	background-color: black;
+	background-color: white;
     font-family: 'Red Hat Text', sans-serif;
 }
 
@@ -12,23 +13,42 @@ a {
     color: white;
 }
 
-header{
-	margin:-10px;	
+#sign {
+	color: black;
+	margin-left: 47px;
 }
 
-.header-logo{
+#line {
+	color: #BDBDBD;
+	margin-top: 3px;
+	margin-bottom: 7px;
+}
+
+
+#logo1{
+	color: #19A8BE;
+	position: absolute;
+	top: 66px;
+	left: 110px;
+	font-family: Red Hat Text;
+}
+#logo2{
+    color: #e1e919;
+    position: absolute;
+    top: 66px;
+    left: 143px;
+	font-family: Red Hat Text;
+}
+
+#header-logo{
     margin: 15px;
     border: 0px;
-    padding-left: 30px;
+    padding: 0px;
     float: left;
-    text-align: left;
-    font-family: Red Hat Text;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 19px;
-	color : white;
+	height: 10px;
+	width: 10px;
 }
+
 .header-link {
     margin: 15px;
     border: 0px;
@@ -73,21 +93,15 @@ main {
 	border-radius: 40px;
 }
 
-#head {
-	color: white;
-	margin-left: 10px;
-}
-
 #submit {
 	padding-left: 50px;
 	padding-right: 50px;
-	padding:10px; 
-    border-radius: 50px;
-    width: 250px;
+	padding:10px;
+    width: 300px;
     height: 40px;
     margin: 10px;
 	border: none;
-    background: black;
+    background: rgba(26, 169, 191, 1);
     color: white;
     font-family: 'Red Hat Text', sans-serif;
 	cursor: pointer;
@@ -95,6 +109,7 @@ main {
 
 #username, #password {
 	margin: 100px;
+	border-bottom-color: rgba(25, 168, 190, 1);
 	color: #c9c9c9;
     text-indent: 20%;
     font-family: 'Red Hat Text', sans-serif;
@@ -106,7 +121,7 @@ main {
     height: 40px;
     margin: 10px;
 	font-size:15px;
-    color: #b9b9b9;
+	color: rgba(26, 169, 191, 1);
     font-family: 'Red Hat Text', sans-serif;
 	cursor: pointer;
 }
@@ -120,11 +135,5 @@ main {
     border: none;
     text-align: 10px;
 	padding: 10px;
-    padding-top:20px;	
-}
-
-.navigation{
-	background: black;
-	height: 50px;
-	
+    padding-top:25px;	
 }
