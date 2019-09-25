@@ -1,10 +1,9 @@
 body {
-	background-image: url(RectangleNETWORTH BACKGROUND.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-blend-mode: luminosity;
-	background-color: white;
+    background-color: white;
     font-family: 'Red Hat Text', sans-serif;
 }
 
@@ -22,6 +21,7 @@ a {
 	color: #BDBDBD;
 	margin-top: 3px;
 	margin-bottom: 7px;
+	font-family: Open sans;
 }
 
 
@@ -37,7 +37,7 @@ a {
     position: absolute;
     top: 66px;
     left: 143px;
-	font-family: Red Hat Text;
+    font-family: Red Hat Text;
 }
 
 #header-logo{
@@ -45,45 +45,30 @@ a {
     border: 0px;
     padding: 0px;
     float: left;
-	height: 10px;
-	width: 10px;
+    height: 10px;
+    width: 10px;
 }
 
-.header-link {
-    margin: 15px;
-    border: 0px;
-    padding: 0px;
-    float: right;
-    text-align: center;
-    font-family: Red Hat Text;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 19px;
-    color: white;
-    padding-right: 50px;
-    
-}
+
 section {
     position: absolute;
     top: 50%;
     left: 50%;
     margin-right: -50%;
-        transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%)
 }
 
 input {
-
 	background: none;
-    width: 280px;
-    height: 10px;
-    margin: 10px;
+        width: 280px;
+        height: 10px;
+        margin: 10px;
 	border-top: none;
 	border-right: none;
 	border-left: none;
 	border-bottom-color: #c9c9c9;
 	border-bottom-width: 0.5px;
-    text-align: 10px;
+        text-align: 10px;
 	padding: 15px;
 	padding-left:5px;
     
@@ -97,13 +82,13 @@ main {
 	padding-left: 50px;
 	padding-right: 50px;
 	padding:10px;
-    width: 300px;
-    height: 40px;
-    margin: 10px;
+        width: 300px;
+        height: 40px;
+        margin: 10px;
 	border: none;
-    background: rgba(26, 169, 191, 1);
-    color: white;
-    font-family: 'Red Hat Text', sans-serif;
+        background: rgba(26, 169, 191, 1);
+        color: white;
+        font-family: 'Red Hat Text', sans-serif;
 	cursor: pointer;
 }
 
@@ -111,29 +96,29 @@ main {
 	margin: 100px;
 	border-bottom-color: rgba(25, 168, 190, 1);
 	color: #c9c9c9;
-    text-indent: 20%;
-    font-family: 'Red Hat Text', sans-serif;
+        text-indent: 20%;
+        font-family: 'Red Hat Text', sans-serif;
 }
 
 .register-btn {
 	text-align: center;
-    width: 350px;
-    height: 40px;
-    margin: 10px;
+        width: 350px;
+        height: 40px;
+        margin: 10px;
 	font-size:15px;
 	color: rgba(26, 169, 191, 1);
-    font-family: 'Red Hat Text', sans-serif;
+        font-family: 'Red Hat Text', sans-serif;
 	cursor: pointer;
 }
 
 #register {
 	background-color: white ;
-    border-radius: 25px;
-    width: 350px;
-    height: 390px;
-    margin: 10px;
-    border: none;
-    text-align: 10px;
+        border-radius: 25px;
+        width: 350px;
+        height: 390px;
+        margin: 10px;
+        border: none;
+        text-align: 10px;
 	padding: 10px;
-    padding-top:25px;	
+        padding-top:25px;	
 }
