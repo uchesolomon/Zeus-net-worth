@@ -1,4 +1,5 @@
-<!DOCTYPE html><html>
+<!DOCTYPE html>
+<html>
     <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" type="text/css" href="login.css">
@@ -9,41 +10,46 @@
     </head>
     <body>
         <header>
-			<div class="navigation">
-				<nav class="header-con">              
-					<a href="#Login" class="header-link">
-						Sign In
-					</a>
-					<a href="#Register" class="header-link">
-						Sign Up
-						</a>           
-				</nav>
-			</div>
+		<div class="navigation">
+            <nav class="header-con" >
+			    <div id="header-logo">
+					<img src="zeuslogo.png" alt="zeus">
+                </div>
+				<div class="one">
+					<h4 id="logo1">NET</h4><h4 id="logo2">WORTH</h4>
+				</div>
+                
+                
+            </nav>
+		</div>
         </header>
 		
         <section>
-        <main>
+		        <div id="sign">
+					<h2 id="head">Sign In</h2>
+					<h4 id="line">Welcome back</h4>
+				</div>
+		
 			<div align="center">
-			<div id="login">
-                <form>
-					<div class= "details">
-                    <input type="text" name="username" id="username" placeholder="Username"><br>                  
-                    <input type="password" name="password" id="password" placeholder="Password"><br>
-                    <input type="submit" id="submit" value="Sign in">
-					</div>
-                 </form>
-<br>
-        <aside>
-            <input element, type="checkbox" name="checkbox" class="box">Keep me signed in<a href="#" class="login-aside"></a>
-            <a href="#" class="login-aside">Forget Password?</a>
-        </aside>
-		<br>
+					
+				<div id="register">
+					<form>
+						<div class="details">
+						<input type="email" name="Email" id="email" placeholder="Email Address" required><br>
+						<input type="password" name="password"  placeholder="Password" required><br>
+						</div>
+					</form>
+						<br>
+				  		<button id="submit" type="button">Sign In</button>
+						<br>
+						<h5>Don't have an account?<a href= "#Sign up page.html" align= "center" class="register-btn" type="button">Sign up</a></h5>
+				</div> 
 			</div>
-        </main>
-        </section>
-
-
-    <script src="script.js"></script>
+       
+    </section>
+	
+	<script src="script.js"></script>
+	
     </body>
     
 </html>
