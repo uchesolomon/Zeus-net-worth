@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NetWorth Homepage</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles2.css">
+</head>
+<body style="background-color: #E5E5E5">
+
+
+    <div class="container" id="original" >
+            <div class="navbar fixed-top navbar-light bg-light" >
+                <div class="left"><a href="#"><img src="menu_icon.jpg" width="40" height="30" alt=""></a></div>
+                <a class="navbar-brand" href="#" id="navtitle">Networth Calculator</a>
+                <div class="right"><a href="splash.html"><img src="zeuslogo.png" width="75" height="45" alt=""></a></div>
+
+            </div>
+
+            <div class="after_nav" style="max-width:470px;margin:auto">
+                <h2>Welcome</h2>
+                <h1>John</h1>
+                <div class="my_btn"><button type="button" class="btn" id="calc2">Calculate Networth</button></div>
+
+            </div>
+
+                <form action="#" style="max-width:470px;margin:auto" id="main" method="POST">
+
+
+                    <br><br>
+
+                    <div class="form-group">
+                        <label class="input-label">Net Worth (&#8358;)</label>
+                        <input type="number" class="form-control" id="">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="input-label">Assets (&#8358;)</label>
+                        <input type="number" class="form-control" >
+                    </div>
+
+                    <div class="form-group">
+                        <label class="input-label">Cash (&#8358;)</label>
+                        <input type="email" class="form-control" >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1" class="input-label">Liabilities (&#8358;)</label>
+                        <input type="number" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1" class="input-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" >
+                        <button type="submit" class="btn btn-primary" id="calc">CALCULATE</button>
+                    </div>
+
+
+
+
+
+                    <p id="net" style="margin-top: 20px;">Your networth is   </p>
+                    <br>
+                    <a href="#sign_in" id="total">&#8358;</a>
+
+                </form>
+            </div>
+
+</body>
+</html>
