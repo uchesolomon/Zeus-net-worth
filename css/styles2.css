@@ -31,11 +31,12 @@ form h1{
 }
 h2{
     font-family: Sans-serif;
-    font-weight: normal;
+    font-style: normal;
     font-size: 27px;
     line-height: 29px;
 
     color: #BDBDBD;
+    text-align: left;
     letter-spacing: 2px;
 }
 .form-group label{
@@ -77,17 +78,13 @@ h2{
     width: 100%;
     height: 48px;
 }
-.my_btn #calc2{
-    color: #19A8BE;
-
-}
-.my_btn{
+.calculate{
     width: 186px;
     height: 34px;
     background: #FFFFFF;
     border-radius: 11.5px;
     margin-bottom: 15px;
-    padding: 1px;
+    padding: 5px;
     color: #19A8BE;
 }
 a, a:hover, a:focus{
@@ -96,7 +93,7 @@ a, a:hover, a:focus{
 #main{
     background-color: white;
     width: 500px;
-    padding: 20px 50px;
+    padding: 1px 20px 10px 20px;
 }
 .after_nav{
     background-color: #E5E5E5;
@@ -108,7 +105,7 @@ div.navbar{
 }
 
 #navtitle{
-    /*width: 200px;*/
+    width: 200px;
     margin: 0 auto;
     color: #FFFFFF;
     font-size: 20px;
@@ -125,7 +122,7 @@ div.navbar{
     text-align: left;
     color: #19A8BE;
 }
-#total{
+#total, .total{
     text-align: center;
     font-size: 30px;
 }
@@ -133,13 +130,14 @@ div.navbar{
     margin: 0 auto;
     width: 960px;
     height: 510px;
-    background-image: url('../zeus_logo.jpg');
+    background-image: url('../image/zeus_logo.jpg');
     background-repeat: no-repeat;
     background-size: auto;
 }
 #home{
     font-size: 24px;
 }
+
 .left{
     float:left;
 }
