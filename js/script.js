@@ -1,6 +1,5 @@
 const btn = document.querySelector('#submit-btn');
-const form = document.querySelector('#form');
-const demo = document.querySelector('#demo');
+const demo = document.querySelector('#display-worth');
 const inputs = document.querySelectorAll('input');
 const assetsInputFields = document.querySelectorAll('.plus');
 const liabilitiesInputFields = document.querySelectorAll('.minus');
@@ -46,15 +45,12 @@ const clearFields = (fields) => {
   });
 }
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
+btn.addEventListener('click', () => {
+
   let sumOfAssets = getSumOfAssets(assetsArr);
   let sumOfLiabilities = getSumOfLiabilities(liabilitiesArr);
   let worth = sumOfAssets - sumOfLiabilities;
   demo.textContent = worth.toFixed(2);
-  console.log(sumOfLiabilities)
-  clearFields(inputs)
+  clearFields(inputs);
+
 })
-
-
-console.log(liabilitiesArr);
