@@ -1,67 +1,475 @@
-<!DOCTYPE html>
-<html>
-<head><title>Networth Calculator</title>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-  <body>
-    <h1> Networth Calculator</h1>
-    <div id="container">
-      <h3>Assets</h3>
-    <form>
-      Home:<input type="text" id="asst" onkeyup="myFunction()" onfocus="myOtherFunction(this)"/>
-      <p>
-      Other real estate: <input type="text" id="asst" onkeyup="myFunction()" onfocus="myOtherFunction(this)"/>
-      <p>
-      Bonds: <input type="text" id="asst" onkeyup="myFunction()" onfocus="myOtherFunction(this)"/>
-      <p>
-      Stocks:<input type="text" id="asst" onkeyup="myFunction()" onfocus="myOtherFunction(this)"/>
-      <p>
-      Mutual funs: <input type="text" id="asst" onkeyup="myFunction()" onfocus="myOtherFunction(this)"/>
-      <p>
-      Pension accounts: <input type="text" id="asst" onkeyup="myFunction()" onfocus="myOtherFunction(this)"/>
-      <p>
-      Life insurance value:<input type="text" id="asst" onkeyup="myFunction()" onfocus="myOtherFunction(this)"/>
-      <p>
-      Cars: <input type="text" id="asst" onkeyup="myFunction()" onfocus="myOtherFunction(this)"/>
-      <p>
-      Other vehicles: <input type="text" id="asst" onkeyup="myFunction()" onfocus="myOtherFunction(this)"/>
-      <p>
-      Household items:<input type="text" id="asst" onkeyup="myFunction()" onfocus="myOtherFunction(this)"/>
-      <p>   
-      Jewelry: <input type="text" id="asst" onkeyup="myFunction()" onfocus="myOtherFunction(this)"/>
-      <p>      
-      Savings accounts: <input type="text" id="cash" onkeyup="myFunction()" onfocus="myOtherFunction(this)"/>
-      <p>
-      Fixed deposits:<input type="text" id="cash" onkeyup="myFunction()" onfocus="myOtherFunction(this)"/>
-      <p>          
-      Cash at hand: <input type="text" id="cash" onkeyup="myFunction()" onfocus="myOtherFunction(this)"/>
-      <p>          
-      Other: <input type="text" id="cash" onkeyup="myFunction()" onfocus="myOtherFunction(this)"/>
-      <p>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-      <h3>Liabilities</h3>
-
-      Home mortgage: <input type="text" id="liab" onkeyup="myFunction()" onfocus="myOtherFunction(this)"/>
-      <p>
-      Other mortgage: <input type="text" id="liab" onkeyup="myFunction()" onfocus="myOtherFunction(this)"/>
-      <p>
-      Car Loans: <input type="text" id="liab" onkeyup="myFunction()" onfocus="myOtherFunction(this)"/>
-      <p>
-      Business loans: <input type="text" id="liab" onkeyup="myFunction()" onfocus="myOtherFunction(this)"/>
-      <p>
-      Credit card debt: <input type="text" id="liab" onkeyup="myFunction()" onfocus="myOtherFunction(this)"/>
-      <p>
-      Other loans: <input type="text" id="liab" onkeyup="myFunction()" onfocus="myOtherFunction(this)"/>
-      <p>
-
-    </form>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- font awesome -->
+    <script src="/js/all.js"></script>
 
 
+    <title>Net-Worth Calculator</title>
+  </head>
+  <body class="bg-secondary">
+    <nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <a href="#nav " class="navbar-brand"> <i class="fas fa-dollar-sign text-success"></i> <strong>&#8358;ET</strong>-Worth Calculator</a>
+      <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="my-nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Tangible" tabindex="-1" aria-disabled="true">Tangible Asset</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#investments" tabindex="-1" aria-disabled="true">Investments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#liquid" tabindex="-1" aria-disabled="true">Liquid Assets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#liabilities" tabindex="-1" aria-disabled="true">Liabilities</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section>
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Assets -->
+          <div class="col-md-8">
+            <div class="row">
+                      <!-- tangible asset -->
+          <div id="Tangible" class="col-md-6 my-3">
+              <div class="card bg-info text-center">
+                <div class="card-body   ">
+                  <h4 class="card-title text-center font-weight-bold text-white ml-2"> Tangible Assets 
+                    <button class="btn btn-transparent ml-3" data-toggle="modal" data-target="#tangible-modal"><i class="fas fa-question-circle fa-1x text-white" ></i></button>
+                  </h4>
+                  <p class="text-center lead font-italic text-white">please input the values</p>
+                  <form class="text-right">
+                  <!-- single input -->
+                    <div class="input-group py-2">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="my-addon">Property</span>
+                      </div>
+                      <input class="form-control text-right pr-3" type="number" name="" placeholder="0.00" aria-label="Home" aria-describedby="my-addon">
+                    </div>
+                    <!-- end of single input -->
+                    <!-- single input -->
+                    <div class="input-group py-2">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="my-addon">Jewelry</span>
+                      </div>
+                      <input class="form-control text-right pr-3" type="number" name="" placeholder="0.00" aria-label="Home" aria-describedby="my-addon">
+                    </div>
+                    <!-- end of single input -->
+                    <!-- single input -->
+                    <div class="input-group py-2">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="my-addon">Home</span>
+                      </div>
+                      <input class="form-control text-right pr-3" type="number" name="" placeholder="0.00" aria-label="Home" aria-describedby="my-addon">
+                    </div>
+                    <!-- end of single input -->
+                    <!-- single input -->
+                    <div class="input-group py-2">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="my-addon">Auto-I</span>
+                      </div>
+                      <input class="form-control text-right pr-3" type="number" name="" placeholder="0.00" aria-label="Home" aria-describedby="my-addon">
+                    </div>
+                    <!-- end of single input -->
+                    <!-- single input -->
+                    <div class="input-group py-2">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="my-addon">Auto-II</span>
+                      </div>
+                      <input class="form-control text-right pr-3" type="number" name="" placeholder="0.00" aria-label="Home" aria-describedby="my-addon">
+                    </div>
+                    <!-- end of single input -->
+                    <!-- single input -->
+                    <div class="input-group py-2">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="my-addon">Others</span>
+                      </div>
+                      <input class="form-control text-right pr-3" type="number" name="" placeholder="0.00" aria-label="Home" aria-describedby="my-addon">
+                    </div>
+                    <!-- end of single input -->
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- end of tangible asset -->
+  
+  
+  
+  
+  
+            <!-- investment -->
+            <div id="investments" class="col-md-6 my-3">
+                <div class="card bg-info text-center">
+                  <div class="card-body   ">
+                    <h4 class="card-title text-center font-weight-bold text-white ml-5"> Investments
+                      <button class="btn btn-transparent" data-toggle="modal" data-target="#investment-modal"><i class="fas fa-question-circle fa-1x text-white" ></i></button>
+                    </h4>
+                    <p class="text-center lead font-italic text-white">please input the values</p>
+                    <form class="text-right">
+                    <!-- single input -->
+                      <div class="input-group py-2">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="my-addon">Mutual Fund</span>
+                        </div>
+                        <input class="form-control text-right pr-3" type="number" name="" placeholder="0.00" aria-label="Home" aria-describedby="my-addon">
+                      </div>
+                      <!-- end of single input -->
+                      <!-- single input -->
+                      <div class="input-group py-2">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="my-addon">Real Estate</span>
+                        </div>
+                        <input class="form-control text-right pr-3" type="number" name="" placeholder="0.00" aria-label="Home" aria-describedby="my-addon">
+                      </div>
+                      <!-- end of single input -->
+                      <!-- single input -->
+                      <div class="input-group py-2">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="my-addon">Retirement</span>
+                        </div>
+                        <input class="form-control text-right pr-3" type="number" name="" placeholder="0.00" aria-label="Home" aria-describedby="my-addon">
+                      </div>
+                      <!-- end of single input -->
+                      <!-- single input -->
+                      <div class="input-group py-2">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="my-addon">Stock</span>
+                        </div>
+                        <input class="form-control text-right pr-3" type="number" name="" placeholder="0.00" aria-label="Home" aria-describedby="my-addon">
+                      </div>
+                      <!-- end of single input -->
+                      <!-- single input -->
+                      <div class="input-group py-2">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="my-addon">Bonds</span>
+                        </div>
+                        <input class="form-control text-right pr-3" type="number" name="" placeholder="0.00" aria-label="Home" aria-describedby="my-addon">
+                      </div>
+                      <!-- end of single input -->
+                      <!-- single input -->
+                      <div class="input-group py-2">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="my-addon">Other</span>
+                        </div>
+                        <input class="form-control text-right pr-3" type="number" name="" placeholder="0.00" aria-label="Home" aria-describedby="my-addon">
+                      </div>
+                      <!-- end of single input -->
+                    </form>
+                  </div>
+                </div>
+            </div>
+            <!-- End of Investment -->
+  
+            <!-- liquid Assets -->
+            <div id="liquid" class="col-md-6 d-none d-md-block  mx-auto my-3">
+                <div class="card bg-info">
+                  <div class="card-header bg-info">
+                    <h3 class="strong text-center text-white">How it works</h3>
+                  </div>
+                  <div class="card-body ">
+                    <h5 class="card-title text-center ">What is Net-Worth?</h5>
+                    <p class="card-text">
+                        Have you ever wondered what you are worth? Networth is what you are value at in monetary terms.
+                        Net worth is determined by subtracting your liabilities from your assets at a specific moment in time. If you have more assets than liabilities, you have a positive net worth. If your liabilities overwhelm your assets, your net worth is negative.
+                        <kbd>Networth = <span class="text-info">Assets</span>  - <span class="text-danger">Liabilities</span></kbd>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            <!-- End of Liquid asset -->
+            
+            <!-- liquid Assets -->
+            <div id="liquid" class="col-md-6 mx-auto my-3">
+                <div class="card bg-info  text-center">
+                  <div class="card-body  ">
+                    <h4 class="card-title text-center font-weight-bold text-white ml-5"> Liquid Assets
+                      <button class="btn btn-transparent" data-toggle="modal" data-target="#liquid-modal"><i class="fas fa-question-circle fa-1x text-white" ></i></button>
+                    </h4>
+                    <p class="text-center lead font-italic text-white">please input the values</p>
+                    <form class="text-right">
+                    <!-- single input -->
+                      <div class="input-group py-2">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="my-addon">Money Market Funds</span>
+                        </div>
+                        <input class="form-control text-right pr-3" type="number" name="" placeholder="0.00" aria-label="Home" aria-describedby="my-addon">
+                      </div>
+                      <!-- end of single input -->
+                      <!-- single input -->
+                      <div class="input-group py-2">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="my-addon">Savings</span>
+                        </div>
+                        <input class="form-control text-right pr-3" type="number" name="" placeholder="0.00" aria-label="Home" aria-describedby="my-addon">
+                      </div>
+                      <!-- end of single input -->
+                      <!-- single input -->
+                      <div class="input-group py-2">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="my-addon">Stock</span>
+                        </div>
+                        <input class="form-control text-right pr-3" type="number" name="" placeholder="0.00" aria-label="Home" aria-describedby="my-addon">
+                      </div>
+                      <!-- end of single input -->
+                      <!-- single input -->
+                      <div class="input-group py-2">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="my-addon">Cash</span>
+                        </div>
+                        <input class="form-control text-right pr-3" type="number" name="" placeholder="0.00" aria-label="Home" aria-describedby="my-addon">
+                      </div>
+                      <!-- end of single input -->
+                      <!-- single input -->
+                      <div class="input-group py-2">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="my-addon">Other</span>
+                        </div>
+                        <input class="form-control text-right pr-3" type="number" name="" placeholder="0.00" aria-label="Home" aria-describedby="my-addon">
+                      </div>
+                      <!-- end of single input -->
+                    </form>
+                  </div>
+                </div>
+              </div>
+            <!-- End of Liquid asset -->
+            </div>
+          </div>
 
-    <p>Your Networth is : <span id="demo"></span></p>
 
+
+          <!-- liabilities -->
+          <div id="liabilities" class="col-md-4">
+              <div class="row">
+                        <!-- Liabilities -->
+            <div class="col my-3">
+                <div class="card bg-danger text-center">
+                  <div class="card-body   ">
+                    <h4 class="card-title text-center font-weight-bold text-white ml-2"> Long-term liabilities 
+                      <button class="btn btn-transparent ml-3" data-toggle="modal" data-target="#longterm-modal"><i class="fas fa-question-circle fa-1x text-white" ></i></button>
+                    </h4>
+                    <p class="text-center lead font-italic text-white">please input the values</p>
+                    <form class="text-right">
+                    <!-- single input -->
+                      <div class="input-group py-2">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="my-addon">Real Estate</span>
+                        </div>
+                        <input class="form-control text-right pr-3" type="number" name="" placeholder="0.00" aria-label="Home" aria-describedby="my-addon">
+                      </div>
+                      <!-- end of single input -->
+                      <!-- single input -->
+                      <div class="input-group py-2">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="my-addon">Mortgage</span>
+                        </div>
+                        <input class="form-control text-right pr-3" type="number" name="" placeholder="0.00" aria-label="Home" aria-describedby="my-addon">
+                      </div>
+                      <!-- end of single input -->
+                      <!-- single input -->
+                      <div class="input-group py-2">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="my-addon">Car loan</span>
+                        </div>
+                        <input class="form-control text-right pr-3" type="number" name="" placeholder="0.00" aria-label="Home" aria-describedby="my-addon">
+                      </div>
+                      <!-- end of single input -->
+                      <!-- single input -->
+                      <div class="input-group py-2">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="my-addon">Overdraft</span>
+                        </div>
+                        <input class="form-control text-right pr-3" type="number" name="" placeholder="0.00" aria-label="Home" aria-describedby="my-addon">
+                      </div>
+                      <!-- end of single input -->
+                      
+
+                      <!-- Short-term Liabilities -->
+                      <h4 class="card-title text-center font-weight-bold text-white ml-2 my-3 pt-5 pb-2"> Short-term liabilities 
+                          <button class="btn btn-transparent ml-3" data-toggle="modal" data-target="#short-term-modal"><i class="fas fa-question-circle fa-1x text-white" ></i></button>
+                          <!-- single input -->
+                      <div class="input-group py-2">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="my-addon">Personal loans</span>
+                          </div>
+                          <input class="form-control text-right pr-3" type="number" name="" placeholder="0.00" aria-label="Home" aria-describedby="my-addon">
+                        </div>
+                        <!-- end of single input -->
+                      <!-- single input -->
+                      <div class="input-group py-2">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="my-addon">Credit Card</span>
+                        </div>
+                        <input class="form-control text-right pr-3" type="number" name="" placeholder="0.00" aria-label="Home" aria-describedby="my-addon">
+                      </div>
+                      <!-- end of single input -->
+                      <!-- single input -->
+                      <div class="input-group py-2">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="my-addon">Medical</span>
+                        </div>
+                        <input class="form-control text-right pr-3" type="number" name="" placeholder="0.00" aria-label="Home" aria-describedby="my-addon">
+                      </div>
+                      <!-- end of single input -->
+                      <!-- single input -->
+                      <div class="input-group py-2">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="my-addon">Other loans</span>
+                        </div>
+                        <input class="form-control text-right pr-3" type="number" name="" placeholder="0.00" aria-label="Home" aria-describedby="my-addon">
+                      </div>
+                      <!-- end of single input -->
+                      <!-- Short-term Liabilities -->
+                      
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- end of tangible asset -->
+              
+              <div class="col-12">
+                <button class="btn btn-success btn-lg btn-block p-3 font-weight-bold mt-2"> Calculate Net-Worth</button>
+                <h4 class="my-5 text-white"> Your Net-Worth is:</h4>
+              </div>
+    
+    
+    
+    
+              <!-- investment -->
+              
+              <!-- End of Investment -->
+
+
+
+
+        </div>
+      </div>
+    </section>
+
+
+<!-- tangible modal -->
+    <div id="tangible-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="my-modal-title">Tangible Assets</h5>
+            <button class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="lead">A tangible asset is an asset that has a finite monetary value and usually a physical form. Tangible assets can typically always be transacted for some monetary value though the liquidity of different markets will vary.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger mx-auto text-center close" data-dismiss="modal">close</button>
+          </div>
+        </div>
+      </div>
     </div>
+    <!-- end of tangible modal -->
+    <!-- Investment modal -->
+    <div id="investment-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="my-modal-title">Investments</h5>
+            <button class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="lead">Investment means creation of capital or goods capable of producing other goods or services. Expenditure on education and health is recognized as an investment in human capital, and research and development in intellectual capital.
+</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger mx-auto text-center close" data-dismiss="modal">close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of Investments modal -->
+    <!--Liquid assets modal -->
+    <div id="liquid-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="my-modal-title">Liquid Assets</h5>
+            <button class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="lead">A liquid asset is cash on hand or an asset that can be readily converted to cash. An asset that can readily be converted into cash is similar to cash itself because the asset can be sold with little impact on its value.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger mx-auto text-center close" data-dismiss="modal">close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of Liquid Asset modal -->
+    <!--Long-term liabilities modal -->
+    <div id="longterm-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="my-modal-title">Long Term Liabilities</h5>
+            <button class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="lead">A claim against the assets, or legal obligations of a person or organization, arising out of past or current transactions or actions. Liabilities require mandatory transfer of assets, or provision of services, at specified dates or in determinable future.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger mx-auto text-center close" data-dismiss="modal">close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of long-term liabilities modal -->
+    <!--short-term liabilities modal -->
+    <div id="short-term-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="my-modal-title">Short Term Liabilities</h5>
+            <button class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="lead">A claim against the assets, or legal obligations of a person or organization, arising out of past or current transactions or actions. Liabilities require mandatory transfer of assets, or provision of services, at specified dates or in determinable future.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger mx-auto text-center close" data-dismiss="modal">close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of short-term liabilities modal -->
+    
+    
 
-    <script src="js/src.js"></script>
+    <!-- bootstrap JQuery -->
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <!-- bootstrap Js -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
