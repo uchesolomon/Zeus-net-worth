@@ -46,35 +46,35 @@
 
             </div>
 
-                <form action="#" style="max-width:470px;margin:auto" id="main" onsubmit="myFunction()">
+                <form action="#" style="max-width:470px;margin:auto" id="main">
 
 
                     <br><br>
 
                     <div class="form-group">
                         <label class="input-label">Money In the Bank (&#8358;)</label>
-                        <input type="number" class="form-control" id="money" required>
+                        <input type="number" class="form-control add" id="money" required>
                     </div>
 
                     <div class="form-group">
                         <label class="input-label">Assets (&#8358;)</label>
-                        <input type="number" id="asst" class="form-control" required>
+                        <input type="number" id="asst" class="form-control add" required>
                     </div>
 
                     <div class="form-group">
                         <label class="input-label">Cash (&#8358;)</label>
-                        <input type="number" id="cash" class="form-control" required>
+                        <input type="number" id="cash" class="form-control add" required>
                     </div>
 
                     <div class="form-group">
                         <label  class="input-label">Liabilities (&#8358;)</label>
-                        <input type="number" id="liab" class="form-control" required>
+                        <input type="number" id="liab" class="form-control substract" required>
                     </div>
 
                     <div class="form-group">
                         <label class="input-label">Worth of Cars (&#8358;)</label>
-                        <input type="number" class="form-control" id="worth" required>
-                        <button type="submit" class="btn btn-primary" id="calc" onclick="myFunction()">CALCULATE</button>
+                        <input type="number" class="form-control add" id="worth" required>
+                        <button type="submit" class="btn btn-primary" id="calc">CALCULATE</button>
                     </div>
 
                     <p id="net" style="margin-top: 20px;">Your networth is  </p>
@@ -83,24 +83,7 @@
 
                 </form>
             </div>
-    <script>
-        function myFunction(){
-          var asst= parseInt(document.getElementById("asst").value);
+        <script src="js/script.js"></script>
 
-          var money= parseInt(document.getElementById("money").value);
-
-          var cash= parseInt(document.getElementById("cash").value);
-
-          var liab= parseInt(document.getElementById("liab").value);
-
-          var worth= parseInt(document.getElementById("worth").value);
-
-          if(asst && money && cash && liab && worth){
-              var networth= (asst + money + cash) - liab;
-              document.getElementById("total").innerHTML=networth;
-          }
-        }
-    </script>
-<!--option 2 : add a help page to it, should add a short description like the app-->
 </body>
 </html>
