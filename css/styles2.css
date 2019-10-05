@@ -130,7 +130,6 @@ div.navbar{
     margin: 0 auto;
     width: 960px;
     height: 510px;
-    background-image: url('/zeus_logo.jpg');
     background-repeat: no-repeat;
     background-size: auto;
 }
@@ -148,7 +147,7 @@ div.navbar{
 .dropdown-menu{
     font-family: Sans-serif;
     width: 200px;
-    height: 192px;
+    height: 258px;
 }
 .dropdown-item{
     padding: 20px 20px;
@@ -167,6 +166,7 @@ div.navbar{
 .dropdown-item:hover {
     background-color: #FFFFFF;
     color: #19A8BE;
+    border-radius: 2px;
 }
 .left .dropdown #dropdownMenuButton {
     border: none;
