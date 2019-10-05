@@ -7,15 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/styles2.css">
 </head>
 <body style="background-color: #E5E5E5">
 
 
-    <div class="container" id="original" >
+    <div class="container" id="original">
             <div class="navbar fixed-top navbar-light bg-light" >
-                <div class="left"><a href="#"><img src="menu_icon.jpg" width="40" height="30" alt=""></a></div>
+
+                <div class="left">
+                    <div class="dropdown">
+                      <a class="btn btn-secondary" role="button" id="dropdownMenuButton"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="menu_icon.jpg" width="40" height="30">
+                      </a>
+
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="sign_in_page.html">Sign In</a>
+                        <a class="dropdown-item" href="sign%20up%20page.html">Sign Up</a>
+                        <a class="dropdown-item" href="#">Log Out</a>
+                      </div>
+                    </div>
+                </div>
+
                 <a class="navbar-brand" href="#" id="navtitle">Networth Calculator</a>
                 <div class="right"><a href="splash.html"><img src="zeuslogo.png" width="75" height="45" alt=""></a></div>
 
@@ -83,6 +101,6 @@
           }
         }
     </script>
-
+<!--option 2 : add a help page to it, should add a short description like the app-->
 </body>
 </html>

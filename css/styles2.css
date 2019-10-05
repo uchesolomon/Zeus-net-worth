@@ -130,7 +130,7 @@ div.navbar{
     margin: 0 auto;
     width: 960px;
     height: 510px;
-    background-image: url('../image/zeus_logo.jpg');
+    background-image: url('/zeus_logo.jpg');
     background-repeat: no-repeat;
     background-size: auto;
 }
@@ -143,4 +143,31 @@ div.navbar{
 }
 .right{
     float: right;
+}
+/*for this new edit*/
+.dropdown-menu{
+    font-family: Sans-serif;
+    width: 200px;
+    height: 192px;
+}
+.dropdown-item{
+    padding: 20px 20px;
+    text-align: center;
+}
+.btn{
+    background-color: #19A8BE !important;
+}
+.dropdown-menu.show{
+    background-color: #19A8BE !important;
+    font-family: Sans-serif;
+    margin: 0px 0px;
+    padding:0 0;
+}
+
+.dropdown-item:hover {
+    background-color: #FFFFFF;
+    color: #19A8BE;
+}
+.left .dropdown #dropdownMenuButton {
+    border: none;
 }
