@@ -1,0 +1,31 @@
+.my-header {
+  width: 70%;
+  margin: 5% auto;
+  text-align: center;
+  padding: 1.5em;
+}
+
+.area {
+  width: 70%;
+  margin: 0.5em auto;
+  font-size: 1.2em;
+}
+
+@media screen and (max-width: 400px) {
+  .my-header {
+    padding-top: 0.5em;
+    margin: 5% auto;
+    text-align: center;
+    padding: 1.5em;
+  }
+
+  .area {
+    padding: 1em;
+    margin: 0.5em auto;
+    font-size: 1.2em;
+  }
+
+  .my-header h2 {
+    margin-top: 40%;
+  }
+}
